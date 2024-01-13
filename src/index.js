@@ -30,7 +30,7 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "add":
-      const newContact = await addContact({ name, email, phone });
+      const newContact = await addContact(name, email, phone);
       console.log(newContact);
       break;
 
@@ -44,8 +44,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-// invokeAction(options);
-
-module.exports = {
-  invokeAction,
-};
+invokeAction(options);
